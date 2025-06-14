@@ -9,7 +9,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const inputs = fg.sync('src/**/*.html')
 
 export default defineConfig({
-  base:'/technologie_webowe_23/',
   plugins: [
     tailwindcss(),
   ],

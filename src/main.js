@@ -21,7 +21,7 @@ async function main() {
   addBtn.classList.remove('hidden')
   addBtn.onclick = () => {
     if (!isLoggedIn) {
-      location.href = '/login/index.html'
+      location.href = 'login/index.html'
       return
     }
     currentEditId = null
@@ -99,7 +99,7 @@ async function renderArticles() {
 async function handleFormSubmit(e) {
   e.preventDefault()
   if (!isLoggedIn) {
-    location.href = '/login/index.html'
+    location.href = 'login/index.html'
     return
   }
 

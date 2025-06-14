@@ -24,6 +24,6 @@ form.addEventListener('submit', async (e) => {
   if (error) {
     alert('❌ Błąd logowania: ' + error.message)
   } else {
-    window.location.href = '/index.html'
+    window.location.href = '../index.html'
   }
 })

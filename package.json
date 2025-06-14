@@ -2,10 +2,12 @@
   "name": "supabase-sdk",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://dropsik15.github.io/technologie_webowe_13",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "npm run build && gh-pages -d dist",
     "preview": "vite preview"
   },
   "devDependencies": {

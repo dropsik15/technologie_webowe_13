@@ -9,7 +9,13 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.5",
+    "tailwindcss": "^4.1.10",
     "vite": "^6.3.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@supabase/supabase-js": "^2.50.0",
+    "@tailwindcss/vite": "^4.1.10"
+  }
 }

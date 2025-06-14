@@ -1,19 +1,15 @@
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
-import { glob } from 'node:fs/promises'
+import fg from 'fast-glob'
 import tailwindcss from '@tailwindcss/vite'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-const inputs = [];
-
-for await (const entry of glob('src/**/*.html')) {
-  console.log(resolve(__dirname, entry));
-  inputs.push(resolve(__dirname, entry));
-}
+const inputs = fg.sync('src/**/*.html')
 
 export default defineConfig({
+  base:'/technologie_webowe_23/',
   plugins: [
     tailwindcss(),
   ],
@@ -21,7 +17,7 @@ export default defineConfig({
   build: {
     emptyOutDir: true,
     rollupOptions: {
-      input: inputs,
+      input: inputs.map((file) => resolve(__dirname, file)),
     },
     outDir: resolve(__dirname, 'dist'),
   },
